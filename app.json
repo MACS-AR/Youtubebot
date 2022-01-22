@@ -1,0 +1,29 @@
+{
+  "name": "تـنصيب بـوت تحميل من الـيوتيوب",
+  "description": "اقوي بوت تحميل من اليوتيوب 🗂 ",
+  "logo": "https://telegra.ph/file/e4b35c210743a74277fef.jpg",
+  "keywords": [
+    "Youtube","YoutubeDownloader"
+  ],
+  "repository": "https://github.com/MACS-AR/Youtubebot",
+  "success_url": "https://t.me/MACS37",
+  "website": "https://github.com/MACS-AR/Youtubebot",
+  "env": {
+        "API_ID": {"description": "هـنا ضع الأيـبي ايدي", "required": true},
+        "API_HASH": {"description": "هـنا ضع الأيبـي هاش" , "required": true},
+        "BOT_TOKEN": {"description": "هـنا ضع تـوكن البوت","required": true}
+  },
+      "buildpacks": [
+        {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"},
+        {"url": "heroku/python"}
+    ],
+  "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+      "stack": "heroku-20"
+
+
+}
